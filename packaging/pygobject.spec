@@ -15,6 +15,7 @@ Summary: Python bindings for GObject
 URL: http://www.pygtk.org/
 Source0: %{name}-%{version}.tar.bz2
 Source101: %{name}-rpmlintrc
+Source1001: 	pygobject.manifest
 
 
 ### Build Dependencies ###
@@ -57,6 +58,7 @@ This package contains documentation files for %{name}.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --enable-thread
@@ -80,6 +82,7 @@ rm -fr $RPM_BUILD_ROOT
 %postun -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(644, root, root, 755)
 %doc AUTHORS NEWS README
 
@@ -95,6 +98,7 @@ rm -fr $RPM_BUILD_ROOT
 %{python_sitearch}/gtk-2.0/gobject
 
 %files codegen
+%manifest %{name}.manifest
 %defattr(755, root, root, 755)
 %{_bindir}/pygobject-codegen-2.0
 %defattr(644, root, root, 755)
@@ -102,6 +106,7 @@ rm -fr $RPM_BUILD_ROOT
 %{_datadir}/pygobject/2.0/codegen
 
 %files devel
+%manifest %{name}.manifest
 %defattr(644, root, root, 755)
 %dir %{_datadir}/pygobject
 %dir %{_includedir}/pygtk-2.0
@@ -112,6 +117,7 @@ rm -fr $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/pygobject-2.0.pc
 
 %files doc
+%manifest %{name}.manifest
 %defattr(644, root, root, 755)
 %doc examples
 %{_datadir}/gtk-doc/html/pygobject
