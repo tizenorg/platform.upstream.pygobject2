@@ -1,0 +1,8 @@
+Change-Id: Iab8bccfcb4b6be6d38390d730780d82c56c77308
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:36:37 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5295
+Project: platform/upstream/pygobject2
+Branch: refs/heads/tizen
